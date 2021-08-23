@@ -1,0 +1,5 @@
+package com.learning.ms.demo.controller;
+
+public class UserController {
+
+}

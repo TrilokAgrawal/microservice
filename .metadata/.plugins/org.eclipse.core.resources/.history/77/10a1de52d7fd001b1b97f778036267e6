@@ -1,0 +1,13 @@
+package com.learning.ms.firstapp.model.requests;
+
+public class UserDetailsRequest {
+	
+	private String userId;
+	private String firstName;
+	private String lastName;
+	private String emailId;
+
+	
+	
+
+}

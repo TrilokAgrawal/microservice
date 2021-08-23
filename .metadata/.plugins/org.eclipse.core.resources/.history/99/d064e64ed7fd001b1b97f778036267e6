@@ -1,0 +1,5 @@
+package com.learning.ms.firstapp.model.requests;
+
+public class UserDetailsRequest {
+
+}

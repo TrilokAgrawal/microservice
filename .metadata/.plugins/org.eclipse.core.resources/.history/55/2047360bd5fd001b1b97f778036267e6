@@ -1,0 +1,10 @@
+package com.learning.ms.firstapp.model;
+
+public class USerRest {
+	
+	private String userId;
+	private String firstName;
+	private String lastName;
+	private String emailId;
+
+}
