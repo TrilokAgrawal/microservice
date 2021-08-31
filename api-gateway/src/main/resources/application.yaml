@@ -1,0 +1,16 @@
+server:  port: 8082  
+spring:  application:    name: api-gateway
+  cloud:    compatibility-verifier:      compatible-boot-versions:      - 
+    gateway:
+      discovery:        locator:          enabled: true
+          lower-case-service-id: true
+      routes:        - id: firstapp          uri: lb://firstapp          #uri: http://localhost:8082/firstapp/users
+          predicates:
+          - Path=/users/**
+          - Method=GET
+          - Header=Authorization, Bearer (.*)
+          filters:          - RemoveRequestHeader=Cookie
+eureka:  client:    service-url:      default-zone: http://localhost:8761/eureka      management:  endpoint:    gateway:      enabled: true  endpoints:    web:      exposure:        include:        - gateway      
+              
+                                                
+              
